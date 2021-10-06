@@ -1,1 +1,2 @@
-document.write("John Wick\'s one liners \"You wanted me Back\," + " I\'m Back!\"");
+var X = "Tom" + "\"Iceman\"" + "Kazanski"
+document.write(X)
