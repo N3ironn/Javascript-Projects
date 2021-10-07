@@ -15,3 +15,5 @@ var Album2 = Album2.fontcolor("pink"); //changing font color
 var Album3 = Album3.fontcolor("purple"); //changing font color
 document.write(Album2); //calling a variable
 document.write(22 * 8); //using document.write to multiply and expression
+
+
