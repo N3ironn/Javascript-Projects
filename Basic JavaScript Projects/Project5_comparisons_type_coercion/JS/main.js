@@ -57,3 +57,8 @@ function ride_Function() { //name of function
     //ternary operator to return the value of can or cant ride. 
     document.getElementById("ride").innerHTML = can_ride + "to ride."; //concatenating 2 statements to form the return or to short or tall enough + to ride. 
 }
+
+console.log(typeof 89); // returns as number in the console when ctrl + shift + I 
+console.log(typeof jenny);//returns as undefined need to link variable
+console.log(typeof false)//returns as a boolean comparison
+console.log(typeof 'Keanu')//returns as a string because of the single quotes 
