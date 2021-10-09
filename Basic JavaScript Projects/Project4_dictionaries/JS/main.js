@@ -6,9 +6,15 @@ function my_Dictionary() { //named function
         age: 5, //
         sound: "bark!" //
     };
-    document.getElementById("dictionary").innerHTML = animal.color; //calls the function finds the element and result is equal to the variable specified. 
+    document.getElementById("dictionary").innerHTML = animal.color; //calls the function finds the element and result 
+    //is equal to the variable specified. 
     //first place marks the catagory period marks the end and second work names the specific data
 }
 
+delete animal.color:
+
+document.write(typeof "word");
+document.write(typeof 8);
+document.write("10" + 5);
 
 
