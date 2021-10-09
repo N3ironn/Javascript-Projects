@@ -9,3 +9,10 @@ function myFunction() {
     sentence += "Yang";
     document.getElementById("Concatenate").innerHTML = sentence;
 }
+
+
+function division(p1, p2, p3) {
+    return p1 / p2 + p3;
+}
+
+    document.getElementById("division").innerHTML = division(12, 3, 2);
