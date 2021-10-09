@@ -47,3 +47,13 @@ function not_Function() {
     document.getElementById("Not").innerHTML = !(10>10); //!(not) operator checks if its true. (True)
 }
 
+document.write(Bigger = (5>1) ? "Left number is bigger":"Right number is bigger"); // ? is the ternary operator (3 part operator)
+// based on the the conditions it responds with the correct value given to it. 
+
+function ride_Function() { //name of function
+    var height, can_ride; // naming variables as "height" and "can_ride"
+    height = document.getElementById("height").value; // assigning value to the variable "height" by calling the html ID "height and the value of 52 minimum"
+    can_ride = (height < 52) ? "You are too short" : "You are tall enough"; //assigning "can_ride" variable the value of height is greater than 52 and using the ? 
+    //ternary operator to return the value of can or cant ride. 
+    document.getElementById("ride").innerHTML = can_ride + "to ride."; //concatenating 2 statements to form the return or to short or tall enough + to ride. 
+}
