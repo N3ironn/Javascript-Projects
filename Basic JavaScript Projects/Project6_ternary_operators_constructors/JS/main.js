@@ -1,29 +1,3 @@
-
-
-document.write("8"+6);
-
-
-function my_Function() {
-    document.getElementById("Test").innerHTML = 0/0;
-    document.getElementById("Test").innerHTML = isNaN('007'); 
-    document.getElementById("Test").innerHTML = isNaN('This is a string');//typing words into the isNaN Field results in a false because its a string not a number
-}
-
-
-document.write(2E310);//displays infinity. writing a number larger then the maximum # we force the browser to display infinity
-document.write(-3E310);//displays -infinity
-
-document.write(10>2);//using greater then or equal to will display in html as true or false based on boolean logic using and or for comparison.
-document.write(10<2);//
-
-console.log(8+18);//math operation displays result in console as 4
-
-console.log(isNaN('008')); //displays in the console as false.
-
-document.write(8==8);//== alerts the computer to check wether they are equal to each other
-document.write(4==1);//
-
-
 x = 8;
 y = 8;
 document.write(x===y); //3=== signs is a comparison of value/type (single variable = assign values)
@@ -72,19 +46,61 @@ function vote_Function() { //name of function
 }
 
 
-function vehicle(make, model, year, color) {
-    this.vehicle_make = make;
+function vehicle(make, model, year, color) { //names the function then names subdata. 
+    this.vehicle_make = make;//value of the object is this. ()
     this.vehicle_model = model;
     this.vehicle_year = year;
     this.vehicle_color = color;
 }
 
-var Jack = new vehicle("Dodge", "Viper", 2020, "Red");
-var Emily = new vehicle("Jeep", "Trail Hawk", 2019, "White and Black");
-var Erik = new vehicle("Ford", "Pinto", 1971, "Mustard");
+var Jack = new vehicle("Dodge", "Viper", 2020, "Red"); //names the variable value and creates a new object.
+var Emily = new vehicle("Jeep", "Trail Hawk", 2019, "White and Black");//vehicle() is the object constructor.
+var Erik = new vehicle("Ford", "Pinto", 1971, "Mustard");//
 
-function car_Function() {
-    document.getElementById("Cars").innerHTML = 
-    "Erik drives a" + Erik.vehicle_color + "-colored" + Erik.vehicle_model +
+function car_Function() { //names the function
+    document.getElementById("Cars").innerHTML = //calls the ID 
+    "Erik drives a" + Erik.vehicle_color + "-colored" + Erik.vehicle_model +//strings interlaced with variable to result in calling the correct data spelled out in the sentence.
     "manufactured in" + Erik.vehicle_year;
 }
+
+
+
+function Person(first, last, age, eye) { //object constructor
+    this.firstName = first; //Data points to be linked too variable
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+var Keanu = new Person("Keanu", "Reeves", 57, "Hazel"); //Variables with data within the paraenthesis
+var Margot = new Person("Margot", "Robbie", 31, "Blue");
+var Anthony = new Person("Anthony", "Hopkins", 83, "Blue");
+
+function p_Function() {
+    document.getElementById("stats").innerHTML =
+    "Name is" + Keanu.firstName + Keanu.lastName + ",Keanu is" + Keanu.age + "years old" + ",and has" + Keanu.eyeColor + "eyes";
+}
+
+function count_Function() { //name function
+    document.getElementById("Counting").innerHTML = Count(); //calling ID and making it equal to the nested function "Count"
+    function Count() {//name function
+        var Starting_point = 9;//naming variable and giving it a value which will be our counting beginning point
+        function Plus_one() {Starting_point += 10;}//nesting a function which will count by whatever value by using the "=" and any other operator applicable here.
+        Plus_one();
+        return Starting_point;
+    }
+}
+
+
+function nested_Function() { //name function
+    document.getElementById("Nest").innerHTML = point(); //calling ID and making it equal to the nested function "Count"
+    function point() {//name function
+        var point = 9;//naming variable and giving it a value which will be our counting beginning point
+        function MultiX() {point *=2;}//nesting a function which will count by whatever value by using the "=" and any other operator applicable here.
+        MultiX();
+        return point;
+    }
+}
+
+
+
