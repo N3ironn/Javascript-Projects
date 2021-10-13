@@ -47,5 +47,23 @@ let digit = 8.88674; //let is kind of like variable but used under different con
 let x1 = digit.toFixed(3); //toFixed rounds the decimal point to 3rd place as specified in the (). 
 document.getElementById("twix").innerHTML = x1;
 
-let PBC = "Peanut Butter Cups";
-document.getElementById("reeses").innerHTML = PBC.valueOf();
+let PBC = "Peanut Butter Cups"; //naming the variable an output
+document.getElementById("reeses").innerHTML = PBC.valueOf(); //using the varible. attached to the value of to out put the PBC value to display in html.
+
+
+function countdown() {//function name
+    var seconds = document.getElementById("seconds").value; //.value links to the value in html. (what is entered into the input box by user). Seconds variable is equal to the value
+
+    function tick() {// function name
+        seconds = seconds - 1; //seconds variable is equal to the amount enter and decreasing by increments of -1 (as written in the line code 58 after =)
+        timer.innerHTML = seconds;
+        var time = setTimeout(tick, 1000);
+        if(seconds == -1) { //if statement shows that if the clock is at -1 then output alert window with string. 
+            alert("Time's up!"); // Pop up window notification of time up
+            clearTimeout(time);
+            timer.innerHTML = "";
+        }
+    }
+    tick();
+}
+
