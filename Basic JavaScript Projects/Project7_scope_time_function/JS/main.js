@@ -17,10 +17,51 @@ function getDate() {//naming function
 
 function nap_Function() {
     if (new Date().getHours() < 14) {
-        document.getElementById("Nap").innerHTML = "Nap";
+        document.getElementById("nap").innerHTML = "Nap";
     }
 
 }
+
+
+
+//Function Error Debug
+
+
+function nap_Function() {
+    if (new Date().getHours() < 14) {
+        document.getElementById("nap").innerHTML = "nap";//placed lower case on element ID "Nap" to create error. 
+    }
+
+}
+
+//Debug Steps taken to fix error.
+    //press ctrl + shift + I while within the browser to pull of the console.log
+    //error code came up "Cannot set properties of null" with a link to the main.js script.
+    //gives you 2 options to fix either change the main.js or change the html. 
+    //click on the main.js link and it shows a red X next to it if you hover over it error code comes up. 
+    //Html link shows you the line its linked to. 
+    //Chrome developer tools looks for the line in the code which has the error.  
+  
+
+
+
+
+
+
+//End Error Debug
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function Age_Function() {//function name
     Age= document.getElementById("Age").value;
@@ -62,6 +103,16 @@ function t_function () {//function name
         Reply = "It is evening time.";
     }
     document.getElementById("daytime").innerHTML = Reply; //calls the id an makes it equal to the reply
+}
+
+
+function full_Sentence() {
+    var part_1 = "I have";
+    var part_2 = "made this";
+    var part_3 = "into a complete";
+    var part_4 = "sentence";
+    var whole_sentence = part_1.concat(part_2, part_3, part_4);
+    document.getElementById("Concatenate").innerHTML= whole_sentence;
 }
 
 
