@@ -44,17 +44,55 @@ function myFunction () {
 
 
 function constant_function() {
-    const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};//variables which never change
-    Musical_Instrument.color = "blue";//sub variable of main variable
-    Musical_Instrument.price = "$900";//
-    document.getElementById("Constant").innerHTML = "The cost of the" + // an equation to combine the variables and strings into a coherent result. 
-        Musical_Instrument.type + "was" + Musical_Instrument;
+    const exotic = {type:"SUV", brand:"ferrari", color:"black", price:"$172k"};//variables which never change
+    exotic.color = "red";//sub variable of main variable
+    exotic.price = "150k"
+    document.getElementById("Constant").innerHTML = "The color of the" + // an equation to combine the variables and strings into a coherent result. 
+        exotic.brand + "was" + exotic.color;
 }
 
+let banana = "yellow"//
 
-const x = 10;//dissonance within the code cannot have a constant and var for the same name
-x = 2;
-document.write(x);
+if (banana === "yellow") {
+    let banana = "blue"//gets value locally
+    console.log(banana)//brings up value within the dev. tools
+}
+
+console.log(banana)//gets the value globally
 
 
+function PI_Function() {
+    return Math.PI;//uses the imbedded function for PI 
+}
 
+document.getElementById("PI").innerHTML = PI_Function();
+
+
+let clothing = {// names out the main variable and sub variable below
+    brand: "True Religion",
+    type: "jeans",
+    style: "distressed",
+    color: "black",
+    description : function() {//property
+        return "The product is" + this.brand + this.type + this.style + "in" + this.color; //equation which returns a string
+    }
+
+}
+document.getElementById("Clothing_store").innerHTML = clothing.description();
+
+
+function break_Function() {
+    var text = "";
+    var i;
+    for (i=0; i < 20; i++) {//sets start point and up to when. Also to count in increments of 1
+        if (i === 20) {//break statement at 20
+            break;//break command
+        }
+        text += "The number is" + i + "<br>";
+        if (i === 20) {
+            continue;//skip over command
+        }
+        text += "The number is" + i + "<br>";
+    }
+document.getElementById("breakit").innerHTML = text;
+}
